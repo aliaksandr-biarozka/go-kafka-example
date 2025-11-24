@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '*/5 * * * *'
 
+env:
+  LOG_LEVEL: debug
+
 jobs:
   renovate:
     runs-on: ubuntu-latest
@@ -13,4 +16,3 @@ jobs:
         with:
           token: ${{ secrets.RE_TE }}
           configurationFile: .github/renovate-config.json
-          logLevel: 'debug'
