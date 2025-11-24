@@ -1,5 +1,6 @@
 {
     "branchPrefix": "test-renovate/",
+    "rebaseWhen": "conflicted",
     "username": "renovate-release",
     "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
     "platform": "github",

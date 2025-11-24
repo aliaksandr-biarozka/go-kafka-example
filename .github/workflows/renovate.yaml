@@ -13,3 +13,4 @@ jobs:
         with:
           token: ${{ secrets.RE_TE }}
           configurationFile: .github/renovate-config.json
+          logLevel: 'debug'
