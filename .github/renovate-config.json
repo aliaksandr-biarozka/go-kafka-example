@@ -5,6 +5,9 @@
     "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
     "platform": "github",
     "forkProcessing": "enabled",
+    "repositories": [
+      "aliaksandr-biarozka/go-kafka-example"
+    ],
     "packageRules": [
       {
         "matchUpdateTypes": [
