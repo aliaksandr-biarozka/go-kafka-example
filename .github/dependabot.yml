@@ -5,33 +5,21 @@ updates:
     schedule:
       interval: "daily"
     groups:
-      all-minor-patch:
+      minor-patch:
         patterns:
           - "*"
         update-types:
           - "minor"
           - "patch"
+      major:
+        patterns:
+          - "*"
+        update-types:
+          - "major"
     rebase-strategy: "auto"
     commit-message:
-      prefix: "chore(non-major deps):"
+      prefix: "chore(deps):"
     labels:
       - "dependencies"
-      - "minor-patch-updates"
-    target-branch: "main"
-  
-  - package-ecosystem: "gomod"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-minor", "version-update:semver-patch"]
-    open-pull-requests-limit: 5
-    rebase-strategy: "auto"
-    commit-message:
-      prefix: "chore(major deps):"
-    labels:
-      - "dependencies"
-      - "major-update"
     target-branch: "main"
 
