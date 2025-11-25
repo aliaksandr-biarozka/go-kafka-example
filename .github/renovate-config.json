@@ -11,11 +11,20 @@
     ],
     "packageRules": [
       {
-        "extends": ["group:allNonMajor"],
+        "description": "Group all non-major into one PR",
+        "extends": ["group:allNonMajor", "config:recommended", "helpers:pinGitHubActionDigests"],
         "dependencyDashboardApproval": false,
         "minimumReleaseAge": "14 days",
         "groupName": "non-major deps",
         "groupSlug": "non-major-deps"
+      },
+      {
+        "description": "Group all major old updates into one PR",
+        "matchCurrentAge": "> 13 months",
+        "extends": ["config:recommended", "helpers:pinGitHubActionDigests"],
+        "matchUpdateTypes": ["major"],
+        "groupName": "major-old",
+        "groupSlug": "major-old"
       }
     ]
   }
