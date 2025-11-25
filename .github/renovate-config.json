@@ -11,14 +11,11 @@
     ],
     "packageRules": [
       {
-        "matchUpdateTypes": [
-          "pin",
-          "digest",
-          "patch",
-          "minor"
-        ],
+        "extends": ["group:allNonMajor"],
         "dependencyDashboardApproval": false,
-        "minimumReleaseAge": "14 days"
+        "minimumReleaseAge": "14 days",
+        "groupName": "non-major deps",
+        "groupSlug": "non-major-deps"
       }
     ]
   }
