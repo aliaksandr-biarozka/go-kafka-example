@@ -3,8 +3,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/"
     schedule:
-      interval: "cron"
-      cron: "*/5 * * * *"
+      interval: "daily"
     groups:
       all-minor-patch:
         patterns:
@@ -23,15 +22,14 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/"
     schedule:
-      interval: "cron"
-      cron: "*/5 * * * *"
+      interval: "daily"
     ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-minor", "version-update:semver-patch"]
-    open-pull-requests-limit: 1
+    open-pull-requests-limit: 5
     rebase-strategy: "auto"
     commit-message:
-      prefix: "chore(deps):"
+      prefix: "chore(major deps):"
     labels:
       - "dependencies"
       - "major-update"
