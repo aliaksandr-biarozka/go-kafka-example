@@ -23,6 +23,7 @@
         "matchCurrentAge": "> 13 months",
         "extends": ["config:recommended", "helpers:pinGitHubActionDigests"],
         "matchUpdateTypes": ["major"],
+        "dependencyDashboardApproval": false,
         "groupName": "major-old",
         "groupSlug": "major-old"
       }
